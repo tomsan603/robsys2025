@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import sys
+def tonum(s):
+    try:
+        return int(s)
+    except:
+        return float(s)
 ans=0
 for n in sys.stdin:
-    try:
-        ans+=int(n)
-    except:
-        ans+=float(n)
+    ans+=tonum(n)
 print(ans)
